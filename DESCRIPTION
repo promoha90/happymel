@@ -7,3 +7,9 @@ Authors@R: c(
   person("Tomás", "Rodrigues", email="jermiasroberto1@gmail.com", role=c("aut"))
 )
 LICENSE: MIT + file LICENSE
+Imports:
+  tuneR,
+  seewave,
+  signal
+Suggests:
+  testthat
