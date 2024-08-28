@@ -1,0 +1,9 @@
+Package: mtv_visualizer
+Title: MTV Music Tempo Visualizer
+Description: A Basic Music Tempo Visualizer.
+Version: 1.0.0
+Authors@R: c(
+  person("Mohamed Lotfi", "Hireche Benkert", email="mohamedhireche74@gmail.com", role=c("aut", "cre", "cph")),
+  person("Tomás", "Rodrigues", email="jermiasroberto1@gmail.com", role=c("aut"))
+)
+LICENSE: MIT + file LICENSE
