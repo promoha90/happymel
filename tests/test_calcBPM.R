@@ -3,12 +3,12 @@ library(mockery)
 
 source("../R/calcBPM.R")
 
-wav_file = "../test_wav/CantinaBand3.wav"
+wav_file = "../wav_examples/CantinaBand3.wav"
 test_that("calcBPM returns a numeric value", {
   expect_type(calcBPM(wav_file), "double")
 })
 
-wav_file = "../test_wav/StarWars3.wav"
+wav_file = "../wav_examples/StarWars3.wav"
 test_that("calcBPM returns a numeric value", {
   expect_type(calcBPM(wav_file), "double")
 })
