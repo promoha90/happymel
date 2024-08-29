@@ -1,3 +1,3 @@
-# MTV Music Tempo Visualizer 
+# Happy Melodies
 
 ## Description

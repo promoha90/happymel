@@ -1,6 +1,6 @@
-Package: mtv_visualizer
-Title: MTV Music Tempo Visualizer
-Description: A Basic Music Tempo Visualizer.
+Package: happymel
+Title: Happy Melodies
+Description: A Basic Music Edition and Creation Package.
 Version: 1.0.0
 Authors@R: c(
   person("Mohamed Lotfi", "Hireche Benkert", email="mohamedhireche74@gmail.com", role=c("aut", "cre", "cph")),
@@ -8,8 +8,6 @@ Authors@R: c(
 )
 LICENSE: MIT + file LICENSE
 Imports:
-  tuneR,
-  seewave,
-  signal
+  tuneR
 Suggests:
   testthat
