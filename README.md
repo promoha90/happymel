@@ -1,20 +1,20 @@
-# Happy-Melodies
+# Happy Melodies
 
 ## Overview
 
-The **Happy-Melodies** R package provides tools for processing audio files. It includes functions to apply reverb effects, mix multiple audio tracks, and generate melodies.  
+The **happymel** R package provides tools for processing audio files. It includes functions to apply reverb effects, mix multiple audio tracks, and generate melodies.  
 The package utilizes the `tuneR` library for handling `.wav` files and performing basic audio operations.
 
 ## Installation
 
-To install the **Happy-Melodies** package, clone the repository and install it using `devtools`:
+To install the **happymel** package, clone the repository and install it using `devtools`:
 
 ```r
 # Install devtools if you haven't already
 install.packages("devtools")
 
-# Install the Happy-Melodies package from GitHub
-devtools::install_github("promoha90/Happy-Melodies")
+# Install the Happy Melodies package from GitHub
+devtools::install_github("promoha90/happymel")
 ```
 
 # Functions
