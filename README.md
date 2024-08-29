@@ -67,7 +67,7 @@ reverb("input.wav", delay = 0.5, decay = 0.3)
 tracksmix("track1.wav", "track2.wav", "track3.wav")
 ```
 
-<br><br>
+<br>
 
 # Function Details
 ## reverb
@@ -79,7 +79,7 @@ This function combines multiple .wav files into a single audio track. It pads sh
 ## genmel
 This function generates a melody composed of random notes from the musical scale. It creates sine waves for each note, combines them, and saves the resulting melody as a .wav file.
 
-<br><br>
+<br>
 
 # Tests
 The functions are tested with various scenarios to ensure their correctness:
@@ -91,10 +91,10 @@ The functions are tested with various scenarios to ensure their correctness:
 ### Example Test Usage
 To run the tests, use the testthat package or manually verify each function's behavior as demonstrated in the examples provided above.
 
-<br><br>
+<br>
 
 # License
-This repository is licensed under the [MIT License]("LICENSE").
+This repository is licensed under the [MIT License](LICENSE).
 
 <br>
 
