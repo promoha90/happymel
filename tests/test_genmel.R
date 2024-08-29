@@ -1,30 +1,44 @@
 library(testthat)
-library(mockery)
+library(tuneR)
 
-source("../R/calcBPM.R")
+# Load the function to be tested
+source("../R/piano_wave.R")
+source("../R/genmel.R")
 
-wav_file = "../wav_examples/CantinaBand3.wav"
-test_that("calcBPM returns a numeric value", {
-  expect_type(calcBPM(wav_file), "double")
+# Define test cases
+
+test_that("Successful melody generation", {
+  # Generate a melody with 5 notes
+  genmel(5, "test_melody")
+
+  # Check if output file is created
+  output_file <- "test_melody.wav"
+  expect_true(file.exists(output_file))
+
+  # Check if the file is a valid WAV file and contains data
+  audio <- readWave(output_file)
+  expect_gt(length(audio@left), 0)  # Ensure the file is not empty
+
+  # Clean up
+  file.remove(output_file)
 })
 
-wav_file = "../wav_examples/StarWars3.wav"
-test_that("calcBPM returns a numeric value", {
-  expect_type(calcBPM(wav_file), "double")
+test_that("Invalid number of notes", {
+  expect_error(genmel(-5, "test_melody"),
+               "Error: 'notes' must be a positive integer.")
+
+  expect_error(genmel(0, "test_melody"),
+               "Error: 'notes' must be a positive integer.")
+
+  expect_error(genmel(3.5, "test_melody"),
+               "Error: 'notes' must be a positive integer.")
+
+  expect_error(genmel("five", "test_melody"),
+               "Error: 'notes' must be a positive integer.")
 })
 
-test_that("calcBPM handles non-existent files gracefully", {
-  expect_equal(calcBPM("non_existent_file.wav"), "Error: File not found")
+test_that("Invalid file name", {
+  expect_error(genmel(5, ""), "Error: 'file_name' should be a non-empty string.")
 })
 
-test_that("calcBPM handles files with NA values in FFT", {
-  # Create a mock function to simulate NA values in FFT
-  mock_readWave <- function(file_path) {
-    structure(list(left = c(NA, NA, NA)), class = "Wave")
-  }
 
-  stub(calcBPM, "readWave", mock_readWave)
-
-  result <- calcBPM("mock_file.wav")
-  expect_equal(result, "Error: File not found")
-})
