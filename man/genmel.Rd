@@ -1,21 +1,20 @@
-\name{calcBPM}
-\alias{calcBPM}
-\title{Calculate BPM from a WAV audio}
+\name{genmel}
+\alias{genmel}
+\title{Generate a Piano Melody and Save as WAV File}
 \description{
-  This function calculates the Beats Per Minute (BPM) of a WAV file that you input using the Fast Fourier Transform (FFT) algorithm.
+  Generates a piano-like melody given the number of notes and the name of the file, and saves it as a WAV file.
 }
 \usage{
-calcBPM(file_path)
+genmel(notes, file_name)
 }
 \arguments{
-  \item{file_path}{A string representing the path to the WAV file.}
+  \item{notes}{A positive integer representing the number of notes in the melody.}
+  \item{file_name}{A non-empty string representing the name of the input WAV file.}
 }
 \value{
-  A numeric value representing the BPM of the audio file, or an error message if the FFT contains NA values.
+  None. The function saves the generated melody as a WAV file.
 }
 \examples{
-  \dontrun{
-  bpm <- calcBPM("path/to/your/audiofile.wav")
-  print(bpm)
-  }
+ Example usage:
+ genmel(10, "melody")
 }
