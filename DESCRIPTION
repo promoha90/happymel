@@ -4,10 +4,10 @@ Description: A Basic Music Edition and Creation Package.
 Version: 1.0.0
 Authors@R: c(
   person("Mohamed Lotfi", "Hireche Benkert", email="mohamedhireche74@gmail.com", role=c("aut", "cre", "cph")),
-  person("Tomás", "Rodrigues", email="jermiasroberto1@gmail.com", role=c("aut"))
-)
-LICENSE: MIT + file LICENSE
+  person("Tomás", "Rodrigues", email="jermiasroberto1@gmail.com", role=c("aut")))
+License: MIT + file LICENSE
 Imports:
   tuneR
 Suggests:
   testthat
+Encoding: UTF-8
