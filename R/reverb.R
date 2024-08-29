@@ -1,5 +1,15 @@
 library(tuneR)
 
+# String positiveDouble positiveDouble -> Audio
+
+# Produce a reverbed version of an existing audio
+
+# reverb <- function(file_name, delay, decay) ""  # stub
+
+# reverb <- function(file_name, delay, decay) {   # template
+#   (... file_name, delay, decay)
+# }
+
 # Generate a reverbed audio given a WAV file, delay, and decay
 reverb <- function(file_name, delay, decay) {
   # Validate Input

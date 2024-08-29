@@ -11,8 +11,6 @@ library(tuneR)
 #   (...args)
 # }
 
-library(tuneR)
-
 tracksmix <- function(...) {
   args <- list(...)  # Capture all arguments as a list
   
@@ -57,3 +55,4 @@ tracksmix <- function(...) {
   
   cat("Mixed audio saved as", output_file_name, "\n")
 }
+tracksmix("test1.wav", "test2.wav", "test3.wav")
