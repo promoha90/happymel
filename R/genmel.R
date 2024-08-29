@@ -1,7 +1,7 @@
 library(tuneR)
 
 # Source the piano_wave function
-source("R/piano_wave.R")
+source("piano_wave.R")
 
 # Natural String -> Audio
 
