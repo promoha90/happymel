@@ -5,7 +5,7 @@
   Produces a mixed audio file given multiple audio tracks in WAV format.
 }
 \usage{
-tracksmix(...)
+  tracksmix(...)
 }
 \arguments{
   \item{...}{A variable number of strings representing the names of the input WAV files.}
@@ -14,6 +14,10 @@ tracksmix(...)
   None. The function saves the mixed audio as a new WAV file.
 }
 \examples{
- Example usage:
- tracksmix("track1.wav", "track2.wav", "track3.wav")
+ # Correct example usage
+ # library(happymel)
+ # file_path1 <- system.file("extdata", "example_track1.wav", package = "happymel")
+ # file_path2 <- system.file("extdata", "example_track2.wav", package = "happymel")
+ # file_path3 <- system.file("extdata", "example_track3.wav", package = "happymel")
+ # tracksmix(file_path1, file_path2, file_path3)
 }

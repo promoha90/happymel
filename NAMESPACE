@@ -1,3 +1,7 @@
+# Export functions
 export(genmel)
-export(reverb)
 export(tracksmix)
+export(reverb)
+
+# Import functions from tuneR package
+importFrom(tuneR, Wave, readWave, writeWave, normalize)

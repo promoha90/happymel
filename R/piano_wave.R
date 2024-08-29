@@ -1,7 +1,7 @@
 library(tuneR)
 
 # Function to generate a piano-like waveform
-piano_wave <- function(frequency, duration, sample_rate) {
+.piano_wave <- function(frequency, duration, sample_rate) {
   samples <- round(duration * sample_rate)
   t <- seq(0, duration, length.out = samples)
   

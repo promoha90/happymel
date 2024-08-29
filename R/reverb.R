@@ -1,8 +1,5 @@
 library(tuneR)
 
-# Source the apply_reverb function
-source("apply_reverb.R")
-
 # String positiveDouble positiveDouble -> Audio
 
 # Produce a reverbed version of an existing audio

@@ -8,13 +8,13 @@ test_that("Successful reverb application", {
   # Define a sample WAV file for testing
   writeWave(Wave(left = as.integer(runif(44100, min = -32768, max = 32767)),
                  samp.rate = 44100,
-                 bit = 16), "test.wav")
+                 bit = 16), "wavs/test.wav")
 
   # Run the reverb function
-  suppressWarnings(reverb("test.wav", 0.5, 0.7))
+  suppressWarnings(reverb("wavs/test.wav", 0.5, 0.7))
 
   # Check if output file is created
-  output_file <- "test_reverbed.wav"
+  output_file <- "wavs/test_reverbed.wav"
   expect_true(file.exists(output_file))
 
   # Clean up
@@ -32,26 +32,26 @@ test_that("File is not a WAV", {
 })
 
 test_that("Invalid delay", {
-  expect_error(reverb("test.wav", -0.5, 0.7),
+  expect_error(reverb("wavs/test.wav", -0.5, 0.7),
                "Error: 'delay' must be a positive number.")
 
-  expect_error(reverb("test.wav", Inf, 0.7),
+  expect_error(reverb("wavs/test.wav", Inf, 0.7),
                "Error: 'delay' must be a positive number.")
 })
 
 test_that("Invalid decay", {
-  expect_error(reverb("test.wav", 0.5, -0.7),
+  expect_error(reverb("wavs/test.wav", 0.5, -0.7),
                "Error: 'decay' must be a positive number.")
 
-  expect_error(reverb("test.wav", 0.5, Inf),
+  expect_error(reverb("wavs/test.wav", 0.5, Inf),
                "Error: 'decay' must be a positive number.")
 })
 
 test_that("Non-numeric parameters", {
-  expect_error(reverb("test.wav", "five", 0.7),
+  expect_error(reverb("wavs/test.wav", "five", 0.7),
                "Error: 'delay' must be a positive number.")
 
-  expect_error(reverb("test.wav", 0.5, "seven"),
+  expect_error(reverb("wavs/test.wav", 0.5, "seven"),
                "Error: 'decay' must be a positive number.")
 })
 

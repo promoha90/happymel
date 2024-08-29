@@ -9,10 +9,10 @@ source("../R/genmel.R")
 
 test_that("Successful melody generation", {
   # Generate a melody with 5 notes
-  genmel(5, "test_melody")
+  genmel(5, "wavs/test_melody")
 
   # Check if output file is created
-  output_file <- "test_melody.wav"
+  output_file <- "wavs/test_melody.wav"
   expect_true(file.exists(output_file))
 
   # Check if the file is a valid WAV file and contains data
@@ -24,16 +24,16 @@ test_that("Successful melody generation", {
 })
 
 test_that("Invalid number of notes", {
-  expect_error(genmel(-5, "test_melody"),
+  expect_error(genmel(-5, "wavs/test_melody"),
                "Error: 'notes' must be a positive integer.")
 
-  expect_error(genmel(0, "test_melody"),
+  expect_error(genmel(0, "wavs/test_melody"),
                "Error: 'notes' must be a positive integer.")
 
-  expect_error(genmel(3.5, "test_melody"),
+  expect_error(genmel(3.5, "wavs/test_melody"),
                "Error: 'notes' must be a positive integer.")
 
-  expect_error(genmel("five", "test_melody"),
+  expect_error(genmel("five", "wavs/test_melody"),
                "Error: 'notes' must be a positive integer.")
 })
 

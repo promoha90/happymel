@@ -55,4 +55,3 @@ tracksmix <- function(...) {
   
   cat("Mixed audio saved as", output_file_name, "\n")
 }
-tracksmix("test1.wav", "test2.wav", "test3.wav")

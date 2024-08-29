@@ -16,6 +16,8 @@ reverb(file_name, delay, decay)
   None. The function saves the reverbed audio as a new WAV file.
 }
 \examples{
- Example usage:
- reverb("example.wav", 0.5, 0.3)
+  # Correct example usage
+  # library(happymel)
+  # file_path <- system.file("extdata", "example.wav", package = "happymel")
+  # reverb(file_path, 0.5, 0.3)
 }
