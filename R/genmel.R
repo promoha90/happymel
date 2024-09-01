@@ -1,13 +1,15 @@
-#' Generate a Piano Melody and Save as WAV File
-#'
-#' Generates a piano-like melody given the number of notes and the name of the file, and saves it as a WAV file.
-#' @param notes A positive integer representing the number of notes in the melody.
-#' @param file_name A non-empty string representing the name of the WAV file to save.
-#' @return None. The function saves the generated melody as a WAV file.
-#' @examples
-#' genmel(10, "melody")
-#' @export
 library(tuneR)
+
+source(file.path("R", "piano_wave.R"))
+
+# Natural String -> Audio
+# Produce a a piano-like melody given the number of notes and the name of the file, and saves it as a WAV file.
+
+# genmel <- function(notes, file_name) ""    # stub
+
+# genmel <- function(notes, file_name) {  # template
+#   (... notes, file_name)
+# }
 
 genmel <- function(notes, file_name) {
   file_name <- trimws(file_name)

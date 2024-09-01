@@ -1,3 +1,5 @@
+library(tuneR)
+
 .apply_reverb <- function(audio, delay, decay) {
   # Calculate the number of samples corresponding to the delay
   delay_samples <- as.integer(delay * audio@samp.rate)
