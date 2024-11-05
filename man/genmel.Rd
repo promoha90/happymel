@@ -9,13 +9,12 @@
 }
 \arguments{
   \item{notes}{A positive integer representing the number of notes in the melody.}
-  \item{file_name}{A non-empty string representing the name of the input WAV file.}
+  \item{file_name}{A non-empty string representing the name for the output WAV file (without extension).}
 }
 \value{
   None. The function saves the generated melody as a WAV file.
 }
 \examples{
-  # Correct example usage
-  # library(happymel)
-  # genmel(10, "melody")
+  library(happymel)
+  genmel(10, "melody")
 }

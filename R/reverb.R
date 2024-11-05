@@ -4,14 +4,6 @@ source(file.path("R", "apply_reverb.R"))
 
 # String positiveDouble positiveDouble -> Audio
 
-# Produce a reverbed version of an existing audio
-
-# reverb <- function(file_name, delay, decay) ""  # stub
-
-# reverb <- function(file_name, delay, decay) {   # template
-#   (... file_name, delay, decay)
-# }
-
 # Generate a reverbed audio given a WAV file, delay, and decay
 reverb <- function(file_name, delay, decay) {
   # Validate Input
@@ -42,5 +34,8 @@ reverb <- function(file_name, delay, decay) {
   output_file_name <- paste0(tools::file_path_sans_ext(file_name), "_reverbed.wav")
   writeWave(reverb_audio, output_file_name)
   
-  cat("Reverbed audio saved as", output_file_name, "\n")
+  # Informative message
+  if (verbose) {
+    message("Reverbed audio saved as", output_file_name)
+  }
 }

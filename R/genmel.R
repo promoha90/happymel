@@ -5,12 +5,6 @@ source(file.path("R", "piano_wave.R"))
 # Natural String -> Audio
 # Produce a a piano-like melody given the number of notes and the name of the file, and saves it as a WAV file.
 
-# genmel <- function(notes, file_name) ""    # stub
-
-# genmel <- function(notes, file_name) {  # template
-#   (... notes, file_name)
-# }
-
 genmel <- function(notes, file_name) {
   file_name <- trimws(file_name)
   
@@ -82,5 +76,8 @@ genmel <- function(notes, file_name) {
   output_file_name <- paste0(file_name, ".wav")
   writeWave(combined_wave, output_file_name)
   
-  cat("Piano melody audio saved as", output_file_name, "\n")
+  # Informative message
+  if (verbose) {
+    message("Piano melody audio saved as", output_file_name)
+  }
 }

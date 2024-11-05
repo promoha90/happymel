@@ -8,7 +8,7 @@
 reverb(file_name, delay, decay)
 }
 \arguments{
-  \item{file_name}{A string representing the name of the input WAV file.}
+  \item{file_name}{A string representing the name of the input WAV file, including the .wav extension.}
   \item{delay}{A positive number representing the delay time in seconds.}
   \item{decay}{A positive number representing the decay factor.}
 }
@@ -16,8 +16,7 @@ reverb(file_name, delay, decay)
   None. The function saves the reverbed audio as a new WAV file.
 }
 \examples{
-  # Correct example usage
-  # library(happymel)
-  # file_path <- system.file("extdata", "example.wav", package = "happymel")
-  # reverb(file_path, 0.5, 0.3)
+  library(happymel)
+  file_path <- system.file("extdata", "example.wav", package = "happymel")
+  reverb(file_path, 0.5, 0.3)
 }

@@ -1,16 +1,5 @@
 library(tuneR)
 
-# ...Audio -> Audio
-
-# Produce a mixed audio given audio tracks
-
-# tracksmix <- function(list(...)) ""  # stub
-
-# tracksmix <- function(list(...)) {   # template
-#   args <- list(...)
-#   (...args)
-# }
-
 tracksmix <- function(...) {
   args <- list(...)  # Capture all arguments as a list
   
@@ -53,5 +42,8 @@ tracksmix <- function(...) {
   output_file_name <- "mixed_audio.wav"
   writeWave(mixed_audio, output_file_name)
   
-  cat("Mixed audio saved as", output_file_name, "\n")
+  # Informative message
+  if(verbose){
+    message("Mixed audio saved as", output_file_name)
+  }
 }

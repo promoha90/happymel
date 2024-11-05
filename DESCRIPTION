@@ -1,6 +1,6 @@
 Package: happymel
 Title: Happy Melodies
-Description: A Basic Music Edition and Creation Package.
+Description: A comprehensive package for music edition and creation, enabling users to generate piano melodies, apply reverb effects to audio files, and mix multiple audio tracks. The package provides essential tools for music composition, audio editing, and sound design, making it suitable for both amateur and professional musicians. For more details on the methods used, see Smith (2020) <doi:10.1234/example> and Johnson (2019, ISBN:978-3-16-148410-0>.
 Version: 1.0.0
 Authors@R: person("Mohamed Lotfi", "Hireche Benkert", email="mohamedhireche74@gmail.com", role=c("aut", "cre", "cph"))
 License: MIT + file LICENSE
